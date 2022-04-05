@@ -1,0 +1,56 @@
+body {
+    background-image: url(images/space-stars.gif);
+}
+
+header {
+    display: flex;
+}
+
+h1 a {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    display: flex;
+    color: rgb(255, 255, 255);
+    justify-content: center;
+}
+
+.movies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+time {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.movies li {
+    display: flex;
+    border: solid 1px white;
+    width: 49%;
+    justify-content: center;
+    padding: 10%;
+}
+
+.movie-listing a {
+    display: flex;
+    justify-content: center;
+}

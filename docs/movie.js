@@ -16,7 +16,7 @@ function setMovieInnerHTML(object) {
     $div.innerHTML = `
     <div class="movie">
         <a href="movie.html?movie=${object.episode_id}">${object.title}</a>
-        <time>${object.release_date}</time>
+        <time>${buildDate(object.release_date)}</time>
 
         <h2>Characters</h2>
     </div>
@@ -56,6 +56,30 @@ function setCharacters(array) {
         $li.textContent = element.name
         $ul.append($li)
     }
+}
+
+function buildDate(date) {
+    const monthMap = {
+        1: "Jan",
+        2: "Feb",
+        3: "Mar",
+        4: "Apr",
+        5: "May",
+        6: "Jun",
+        7: "Jul",
+        8: "Aug",
+        9: "Sept",
+        10: "Oct",
+        11: "Nov",
+        12: "Dec",
+        // Etc., could also be titles or whatever else too
+    }
+    const year = date.slice(0, 4)
+    const month = +date.slice(5, 7)
+    const day = date.slice(8, 9)
+    const newId = monthMap[month]
+
+    return `${newId} ${day}, ${year}`
 }
 
 
